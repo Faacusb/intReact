@@ -1,6 +1,6 @@
 import {FooterContainer, TextFooter, RedesFooter} from './FooterStyles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import  {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+
 import { faFacebook, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 function Footer() {
