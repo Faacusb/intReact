@@ -59,12 +59,17 @@ export const CardProducto = styled.div`
 
     }
     @media (max-width: 968px) {
-        width: 40%;
+        width: 100%;
+
+        
         
     }
 
     @media (max-width:576px) {
         width: 100%;
+        img{
+            width: 220px;
+        }
     }
 
 
