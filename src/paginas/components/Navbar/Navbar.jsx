@@ -13,6 +13,8 @@ import { Menu, MenuItem, MenuLink } from "./NavbarStyles";
 
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from 'react-router-dom';
+import Home from '../../Home';
 
 
 
@@ -33,16 +35,16 @@ function Navbar() {
       <LinksContainerStyled>
         <Menu className={isMenuOpen ? 'open' : ''}>
           <MenuItem>
-            <MenuLink href="#">Home</MenuLink>
+            <MenuLink as={Link}to="/">Home</MenuLink>
           </MenuItem>
           <MenuItem>
-            <MenuLink href="#">Nosotros</MenuLink>
+            <MenuLink as={Link} to="/about">Nosotros</MenuLink>
           </MenuItem>
           <MenuItem>
-            <MenuLink href="#">Productos</MenuLink>
+            <MenuLink as={Link} to="/productos">Productos</MenuLink>
           </MenuItem>
           <MenuItem>
-            <MenuLink href="#">Contacto</MenuLink>
+            <MenuLink as={Link} to="/contacto">Contacto</MenuLink>
           </MenuItem>
         </Menu>
       </LinksContainerStyled>

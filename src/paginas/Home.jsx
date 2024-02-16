@@ -11,6 +11,7 @@ function Home() {
     <HomeImageContainerStyled>
         <img src={Eclipsun} alt="" />
     </HomeImageContainerStyled>   
+    
     </HomeContainerStyled>
   )
 }

@@ -11,19 +11,26 @@ import Footer from "./paginas/components/Footer/Footer";
 function App() {
   return (
     <>
+    <BrowserRouter>
       <Navbar />
-      <Layout>
-        <Home />
-        <About />
-        <SectionProductos>
-          <CardsContainer>
-           <Productos />
+      <Routes>
+        <Route path="/" index element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/productos" element={<Productos />} />
+        <Route path="/contacto" element={<Contacto />} />
+      </Routes>
+      {/* <Layout> */}
+        {/* <Home /> */}
+        {/* <About /> */}
+        {/* <SectionProductos> */}
+          {/* <CardsContainer> */}
+           {/* <Productos /> */}
 
-          </CardsContainer>
-        </SectionProductos>
-        <Contacto />
-      </Layout>
-
+          {/* </CardsContainer> */}
+        {/* </SectionProductos> */}
+        {/* <Contacto /> */}
+      {/* </Layout> */}
+      </BrowserRouter>
       <FooterContainer>
         <Footer />
       </FooterContainer>

@@ -5,9 +5,11 @@ export const HomeContainerStyled = styled.div`
     justify-content: space-around;
     align-items: center;
     max-width: 1300px;
+    height: 85vh;
     margin: 0 auto;
+    background-color: #fcbf49;
     gap: 30px;
-    padding-top: 15px;
+    /* padding-top: 15px; */
     /* background-color: #ffffff; */
     h1 {
         margin-bottom: 2rem;
@@ -15,9 +17,11 @@ export const HomeContainerStyled = styled.div`
 
     @media (max-width:968px){
         flex-direction: column;
+        height: 85vh;
+        gap: 0;
     }
     @media (max-width: 576px) {
-        width: 80%;
+        width: 100%;
         
     }
 `;
@@ -71,6 +75,8 @@ export const HomeImageContainerStyled = styled.div `
     }
 
     @media (max-width: 960px){
-        display: none;
+        img{
+            width: 100%;
+        };
     }
 `;

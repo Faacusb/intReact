@@ -7,7 +7,8 @@ export const ContactoSection = styled.div`
     max-width: 1300px;
     margin: 0 auto;
     flex-direction: column;
-    padding: 40px;
+    /* padding: 40px; */
+    height: 74vh;
     @media (max-width:576px) {
         width: 50%;
 

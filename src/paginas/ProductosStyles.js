@@ -10,27 +10,29 @@ export const SectionProductos = styled.div`
     
     
     
-`;
+    `;
 
 export const CardsContainer = styled.div`
     display: flex;
+    margin: 0 auto;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: #fcbf49;
     width: 100%;
     max-width: 1300px;
     align-items: center;
     gap: 20px;
     @media (max-width:968px){
         flex-direction: column;
-        width: 80%;
+        width: 100%;
         height: auto;
     }
     padding-top: 10px;
     padding-bottom: 20px;
 
     @media (max-width: 576px) {
-        width: 85%;
+        width: 100%;
     }
 
 
@@ -68,16 +70,18 @@ export const CardProducto = styled.div`
         border-radius: 10px;
     }
     @media (max-width: 968px) {
-        width: 100%;
-
+        width: 50%;
+        img{
+            width: 100%;
+        }
         
         
     }
 
     @media (max-width:576px) {
-        width: 90%;
+        width: 80%;
         img{
-            width: 220px;
+            width: 100%;
         }
     }
 
