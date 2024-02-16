@@ -1,45 +1,64 @@
+import React, { useState } from 'react';
 import {
-  LinkContainerStyled,
   LinksContainerStyled,
   NavbarContainerStyled,
   ImgLogoContain,
   UserNavStyled,
   UserContainerStyled,
-  HomeContainerStyled,
   Burguer,
 } from "./NavbarStyles";
 import EclipsunLogo from "../../../assets/img/EclipsunLogo-unscreen.gif";
 import { FaUserAlt } from "react-icons/fa";
-import { HiHome } from "react-icons/hi";
+import { Menu, MenuItem, MenuLink } from "./NavbarStyles";
+
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+
+
+
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <NavbarContainerStyled>
       <ImgLogoContain>
         <img src={EclipsunLogo} alt="Logo" />
       </ImgLogoContain>
-      <LinksContainerStyled>
-        <HomeContainerStyled>
-          <a href="#">
-            <LinkContainerStyled>
-              <HiHome />
-            </LinkContainerStyled>
-            Home
-          </a>
-          <a href="#">Productos</a>
-        </HomeContainerStyled>
 
+      <LinksContainerStyled>
+        <Menu className={isMenuOpen ? 'open' : ''}>
+          <MenuItem>
+            <MenuLink href="#">Home</MenuLink>
+          </MenuItem>
+          <MenuItem>
+            <MenuLink href="#">Nosotros</MenuLink>
+          </MenuItem>
+          <MenuItem>
+            <MenuLink href="#">Productos</MenuLink>
+          </MenuItem>
+          <MenuItem>
+            <MenuLink href="#">Contacto</MenuLink>
+          </MenuItem>
+        </Menu>
+      </LinksContainerStyled>
+      
+       
+       
         <UserNavStyled>
           <UserContainerStyled>
             <FaUserAlt />
           </UserContainerStyled>
         </UserNavStyled>
-        <Burguer>
+       
+       
+        <Burguer onClick={toggleMenu}>
           <FontAwesomeIcon icon={faBars} />
         </Burguer>
-      </LinksContainerStyled>
     </NavbarContainerStyled>
   );
 }

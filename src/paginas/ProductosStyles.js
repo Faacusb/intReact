@@ -40,9 +40,11 @@ export const CardsContainer = styled.div`
 
 export const CardProducto = styled.div`
     width: 40%;
-    height: 380px;
+    /* height: 440px; */
+    padding: 10px;
     display: flex;
     flex-direction: column;
+    gap: 10px;
     align-items: center;
     justify-content: center;
     border-radius: 20px;
@@ -53,10 +55,17 @@ export const CardProducto = styled.div`
     h3{
         width: 80%;
     }
+    span{
+        font-weight: 600;
+        font-size: 20px;
+    }
     img {
         width: 340px;
-        
+    }
 
+    button{
+        padding: 10px;
+        border-radius: 10px;
     }
     @media (max-width: 968px) {
         width: 100%;

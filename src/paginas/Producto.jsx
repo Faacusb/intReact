@@ -7,6 +7,7 @@ function Producto({nombre, imagen, descripcion, precio}) {
        <img src={imagen} alt="foto" /> 
        <h3>{descripcion}</h3>
        <span>${precio}</span>
+       <button>Comprar</button>
     </CardProducto>
   )
 }

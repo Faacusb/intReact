@@ -8,7 +8,7 @@ export const HomeContainerStyled = styled.div`
     margin: 0 auto;
     gap: 30px;
     padding-top: 15px;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     h1 {
         margin-bottom: 2rem;
     }
