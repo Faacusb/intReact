@@ -24,7 +24,11 @@ function Navbar() {
   
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-  };
+};
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    };
+  
 
   return (
     <NavbarContainerStyled>
@@ -35,16 +39,16 @@ function Navbar() {
       <LinksContainerStyled>
         <Menu className={isMenuOpen ? 'open' : ''}>
           <MenuItem>
-            <MenuLink as={Link}to="/">Home</MenuLink>
+            <MenuLink as={Link}to="/" onClick={closeMenu}>Home</MenuLink>
           </MenuItem>
           <MenuItem>
-            <MenuLink as={Link} to="/about">Nosotros</MenuLink>
+            <MenuLink as={Link} to="/about" onClick={closeMenu}>Nosotros</MenuLink>
           </MenuItem>
           <MenuItem>
-            <MenuLink as={Link} to="/productos">Productos</MenuLink>
+            <MenuLink as={Link} to="/productos" onClick={closeMenu}>Productos</MenuLink>
           </MenuItem>
           <MenuItem>
-            <MenuLink as={Link} to="/contacto">Contacto</MenuLink>
+            <MenuLink as={Link} to="/contacto" onClick={closeMenu}>Contacto</MenuLink>
           </MenuItem>
         </Menu>
       </LinksContainerStyled>
