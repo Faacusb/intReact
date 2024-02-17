@@ -1,29 +1,40 @@
 import styled from "styled-components";
 
+
+
+export const HomeSectionStyled = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+`;
+
+
 export const HomeContainerStyled = styled.div`
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     max-width: 1300px;
-    height: 85vh;
+    height: 100%;
     margin: 0 auto;
     background-color: #fcbf49;
     gap: 30px;
-    /* padding-top: 15px; */
-    /* background-color: #ffffff; */
+    
     h1 {
         margin-bottom: 2rem;
     }
 
     @media (max-width:968px){
         flex-direction: column;
-        height: 85vh;
-        gap: 0;
+        height: 100%;
+        gap: 1px;
     }
     @media (max-width: 576px) {
         width: 100%;
         
     }
+
 `;
 
 export const HomeTextContainerStyled = styled.div`
@@ -66,15 +77,65 @@ export const HomeTextContainerStyled = styled.div`
     }
 `;
 
+export const HeroImage = styled.div`
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    
+    @media (max-width: 960px){
+        display: flex;
+        width: 100%;
+        img{
+            
+            width: 100%;
+        };
+    }
+
+    @media (max-width: 576px) {
+        background-size: cover;
+    }
+`;
+
+export const HeroImageText = styled.div`
+    display: flex;
+    width: 49%;
+    left: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+
+     @media (max-width: 960px){
+        img{
+            background-size: cover;
+            width: 100%;
+        };
+    }
+
+    @media (max-width: 576px) {
+        background-size: cover;
+    }
+
+`;
+
 export const HomeImageContainerStyled = styled.div `
     width: 40%;
+    padding:10px;
     img {
+        border-radius: 50px;
         width: 100%;
         /* padding-bottom: 75px; */
         border-radius: 2%;
     }
 
     @media (max-width: 960px){
+        display: none;
+        width: 60%;
         img{
             width: 100%;
         };

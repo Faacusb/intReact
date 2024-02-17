@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import {styled, keyframes} from "styled-components";
+
 
 
 export const NavbarContainerStyled = styled.div`
@@ -8,7 +9,7 @@ export const NavbarContainerStyled = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px ;
+    padding: 0 15px ;
     
     
     @media (max-width: 768px){
@@ -64,7 +65,7 @@ export const LinkContainerStyled = styled.div`
 
     @media (max-width: 768px){
     position: absolute;
-    top: 35px;
+    top: 24px;
     right: 50px;
     
     }
@@ -162,6 +163,14 @@ export const SpanStyled = styled.span`
         text-decoration: underline;
     }
 `;
+const rotateAnimation = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+`;
 
 export const Burguer = styled.div`
     cursor: pointer;
@@ -169,6 +178,8 @@ export const Burguer = styled.div`
     svg:last-child{
         font-size: 40px;
         color: #fb8500;
+        transition: transform 0.3s ease; /* Transición de la rotación */
+    transform: ${({ isOpen }) => (isOpen ? "rotate(90deg)" : "rotate(0deg)")}; 
     }
     @media (max-width: 768px) {
         display: flex;

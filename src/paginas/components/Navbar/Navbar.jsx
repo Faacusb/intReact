@@ -62,7 +62,7 @@ function Navbar() {
         </UserNavStyled>
        
        
-        <Burguer onClick={toggleMenu}>
+        <Burguer onClick={toggleMenu} isOpen={isMenuOpen}>
           <FontAwesomeIcon icon={faBars} />
         </Burguer>
     </NavbarContainerStyled>
