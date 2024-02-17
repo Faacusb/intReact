@@ -4,7 +4,8 @@ function Contacto() {
   return (
     <ContactoSection>
       <ContactoFormContainer>
-        <h1>¡Contáctanos!</h1>
+        <h1>¡ECLIPSUN!</h1>
+        <h2>¡Contáctanos!</h2>
         <form>
           <input type="text" id="nombre" name="nombre" placeholder="Nombre" required></input>
           <input type="email" id="email" name="email" placeholder="Email" required></input>
